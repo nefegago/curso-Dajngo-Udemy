@@ -22,7 +22,7 @@
               <p class="mb-0 mbt">
                 <span class="section-heading-under">Publicado por <em><b>{{context.autor}}</b></em> en <em>
                   {% for category in context.category.all %}
-                  <a href="#" class="link">{{category}}</a>{% if not forloop.last %}, {%endif%}  
+                  <a href="{% url 'category' category.id%}" class="link">{{category}}</a>{% if not forloop.last %}, {%endif%}  
                   {% endfor %}
                 </em></span>
               </p>

@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
 from core import views as core_views
 from django.conf import settings
 
@@ -23,6 +24,8 @@ urlpatterns = [
     path('blog/',include('blog.urls')),
     path('',include('core.urls')),
     path('service/', include('service.urls')),
+    path('pages/', include('website.urls')),
+    url(r'^tinymce/', include('tinymce.urls')),
 ]
 
 if settings.DEBUG:

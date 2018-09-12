@@ -40,7 +40,12 @@ INSTALLED_APPS = [
     'django_extensions',
     'blog',
     'core',
+    'website.apps.WebsiteConfig',
     'service.apps.ServiceConfig',
+    'social.apps.SocialConfig',
+    #plugins
+    'ckeditor',
+    #'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +71,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social.context_processors.redes',
+                'website.context_processors.website',
+
             ],
         },
     },
